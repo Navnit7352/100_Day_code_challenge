@@ -1,0 +1,17 @@
+pattern Method:
+    It takes an integer N as input and returns a List of Integers.
+    Creates an ArrayList ans to store the pattern.
+    Initializes k to the value of N.
+    Adds the initial value N to the ans list.
+    Enters a while loop that continues as long as k is greater than 0:
+    Decrements k by 5 in each iteration.
+    Adds the decremented value of k to the ans list.
+    After the first while loop ends, it enters another while loop:
+    Checks if k has reached the original value N.
+    If k equals N, returns the generated pattern ans.
+    Increments k by 5 in each iteration.
+    Adds the incremented value of k to the ans list.
+    If the loop doesn't return within the second while loop, it eventually returns the ans list.
+
+Time Comlexity:
+    the time complexity of this method is O(N).
