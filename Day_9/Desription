@@ -1,0 +1,21 @@
+Initialization:
+    A StringBuilder named ans is created to construct the resultant string.
+    Initially, ans is filled with '0' characters to form a string of length n.
+    Variable k is decremented by 1.
+
+HashSet for Tracking Unique Substrings:
+    A HashSet named visited is created to keep track of unique substrings encountered while generating the resultant string. It starts by adding the initial '0' string.
+
+String Generation:
+    The code enters a while loop that continues until the visited set contains all possible unique strings of length n with digits from '0' to 'k'.
+    It extracts the substring of length n - 1 from the end of the current ans string.
+    Within this loop, it iterates from k down to 0:
+    Constructs a new string currStr by appending a digit from '0' to 'k' to the previously extracted substring.
+    Checks if this newly generated string currStr is present in the visited set. If not, it's added to the set, and the corresponding digit is appended to the ans string.
+    Breaks out of the loop to proceed with the next iteration.
+
+Return:
+    Once all unique strings of length n with digits from '0' to 'k' have been generated, it returns the resulting string.
+
+Time Complexity:
+    The while loop runs until all unique strings of length n with digits '0' to 'k' are generated.
