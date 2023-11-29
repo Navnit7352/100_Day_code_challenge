@@ -1,0 +1,24 @@
+Initialization:
+    mod: A constant used for modulo operations.
+    ans: A variable to store the final count of paths.
+    mp (HashMap): Stores intermediate results, mapping the sum of nodes along a path to its frequency.
+
+sumK_util Function:
+    This function calculates the sum of paths with a given sum.
+    Base Case: If the current node is null, it stops the recursion.
+    Checks if cur + root.data - sum exists in the HashMap.
+    If present, it increments ans by the frequency of that sum.
+    Checks if cur + root.data equals sum. If yes, increments ans.
+    Updates the frequency of cur + root.data in the HashMap.
+    Recursively calls the function for the left and right subtrees.
+    Backtracks by decrementing the frequency of cur + root.data in the HashMap.
+
+sumK Function:
+    Initiates the path counting process by calling sumK_util.
+    Clears the HashMap after the calculations.
+    Stores the final count in a temporary variable (temp), resets ans, and returns temp.
+
+Time Complexity:
+    Traversing through the binary tree involves visiting each node once, resulting in O(N) time complexity, where N is the number of nodes.
+    For each node, operations involving the HashMap take constant or near-constant time.
+    Overall, the time complexity remains O(N), making it an efficient solution for counting paths with a specific sum in a binary tree.
