@@ -1,0 +1,17 @@
+palinArray Method:
+    Takes an array a and an integer n as inputs.
+    Iterates through each number num in the array a.
+
+For each num:
+    Initializes variables: original (to store the original number), reversed (to store the reversed number), and remainder.
+    Enters a while loop that continues until num becomes 0:
+
+Within the loop:
+    Calculates the last digit of num using modulo 10 and stores it in remainder.
+    Updates reversed by appending the digit at the end.
+    Reduces num by removing its last digit (division by 10).
+    Compares the original number (original) with the reversed number (reversed).
+    If they are not equal (i.e., not a palindrome), the method returns 0.
+    If all numbers in the array are palindromes, the method returns 1.
+Time Complexity:
+    the number of digits as 'd' and the number of elements as 'n', the time complexity can be approximated as O(d * n).
