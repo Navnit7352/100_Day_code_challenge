@@ -1,1 +1,13 @@
+Question:   Given a matrix of size N x N. Print the elements of the matrix in the snake like pattern depicted below.
+            Complete the function snakePattern() that takes matrix as input parameter and returns a list of integers in order of 
+            the values visited in the snake pattern.
 
+Solution's Desciption:
+          It initializes an ArrayList<Integer> called snake to store the elements visited in the snake pattern.
+          It calculates the size of the square matrix by getting the length of the input matrix matrix.length.
+          The code then loops through each row of the matrix (for (int i = 0; i < n; i++)) and appends elements to the snake list.
+          For even-indexed rows (if (i % 2 == 0)), it traverses the row from left to right and adds each element to the snake list.
+          For odd-indexed rows, it traverses the row from right to left and adds each element to the snake list.
+          Finally, it returns the snake list containing the elements visited in the snake pattern.
+          Time complexity:
+              The time complexity of this code is O(N^2).            
