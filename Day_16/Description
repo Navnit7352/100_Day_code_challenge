@@ -1,0 +1,34 @@
+insertToAVL Method:
+    This method inserts a new node with the given data into the AVL tree.
+    If the node is null, it creates and returns a new node with the given data.
+    Otherwise, it recursively finds the appropriate position for insertion based on the comparison of the data with the current node's data (node.data).
+    After inserting the new node, it updates the height of the current node.
+    It then checks the balance factor (bf) of the node to determine if any rotations are required to balance the tree:
+    bf > 1: Indicates that the left subtree is taller.
+    data < node.left.data: Requires a right rotation (rightRotate) on the current node.
+    bf < -1: Indicates that the right subtree is taller.
+    data > node.right.data: Requires a left rotation (leftRotate) on the current node.
+    bf > 1 && data > node.left.data: Requires a left rotation on the left child followed by a right rotation on the current node (leftRotate then rightRotate).
+    bf < -1 && data < node.right.data: Requires a right rotation on the right child followed by a left rotation on the current node (rightRotate then leftRotate).
+    Returns the modified or unchanged node after insertion and rotations.
+
+rightRotate Method: 
+    Performs a right rotation on the given y node:
+    Adjusts pointers (right, left) accordingly.
+    Updates the heights of x and y nodes.
+    Returns the new root node after rotation.
+
+leftRotate Method:  
+    Performs a left rotation on the given x node:
+    Adjusts pointers (right, left) accordingly.
+    Updates the heights of x and y nodes.
+    Returns the new root node after rotation.
+
+getBalance Method:  
+    Calculates the balance factor of a node by subtracting the height of the right subtree from the height of the left subtree.
+
+height Method:
+    Determines the height of a node in the tree.
+
+Time Comlexity:
+    The time complexity of inserting a node into an AVL tree is O(log N) on average
