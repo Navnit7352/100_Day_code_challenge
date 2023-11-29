@@ -1,0 +1,14 @@
+Length Check:
+    Initially, the code compares the lengths of s1 and s2. If their lengths are different, they cannot be rotations of each other, so it returns false.
+
+Concatenation:
+    It concatenates s1 with itself, creating a new string temp. This concatenation ensures that if s2 is a rotation of s1, it will be a substring within temp.
+
+Substring Check:
+    It checks if s2 exists within the concatenated string temp using the contains method. If s2 is found within temp, the function returns true, indicating that s2 is a rotation of s1.
+
+Return:
+    If the lengths of the strings are different, it immediately returns false. Otherwise, it checks for the presence of s2 within temp and returns true or false accordingly.
+
+Time Complexity:
+    In the worst case, if contains operates in O(N + M), the overall time complexity would be O(N + M) for this algorithm.
