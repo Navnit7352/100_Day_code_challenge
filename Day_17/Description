@@ -1,0 +1,22 @@
+nthRowOfPascalTriangle Method:
+    It takes an integer n as input, indicating which row of Pascal's Triangle to generate.
+    Initializes an empty ArrayList pre to store the previous row of the triangle.
+    Defines a mod variable to handle modulo operations.
+    Starts a loop that iterates n times (to generate the nth row).
+
+Inside the loop:
+    Creates a new ArrayList current to store the current row being generated.
+    For each index j from 0 to i (inclusive), where i is the current row number:
+    Checks if j is at the beginning or end of the row (j == i or j == 0):
+    If true, adds 1 to current (representing the 1s at the edges of Pascal's Triangle).
+    Otherwise, calculates the value at position j in the current row using values from the previous row:
+    Uses the values at pre.get(j) (current position) and pre.get(j - 1) (previous position) in the pre ArrayList.
+    Calculates the sum (num) and applies modulo mod to prevent overflow.
+    Adds the calculated value num to the current row.
+    Sets pre to current to store the generated row for the next iteration or to be returned as the final result.
+
+Time Complexity:
+    The outer loop runs n times, where n is the row number, contributing O(n) complexity.
+    For each row, inner loop iterations range from 0 to i (inclusive), where i represents the row number.
+    Overall, the time complexity is O(n^2), as the number of operations grows quadratically with the input n.
+
