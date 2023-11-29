@@ -1,0 +1,16 @@
+shuffleArray Method:
+    It takes in an array arr of long integers and an integer n representing the array's size.
+    Initializes j to n/2 and count to 0.
+    Creates a new array ls of long integers with the same size as the input array.
+      
+Utilizes two loops:
+    The first loop iterates from 0 to n/2 - 1:
+    It interleaves the elements of the input array by taking elements from the beginning (arr[i]) and the middle (arr[j]) and stores them in the ls array.
+    Increments count by 2 to fill the ls array with these interleaved elements.
+    The second loop copies the contents of the ls array back into the original arr array, effectively shuffling the elements.
+      
+Time Complexity:
+    The code involves two loops:
+    The first loop runs n/2 times.
+    The second loop runs n times.
+    Thus, the overall time complexity is O(n) because the loops iterate linearly based on the input size n.
