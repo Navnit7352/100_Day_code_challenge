@@ -1,0 +1,19 @@
+Variables:
+    front and rear: These variables keep track of the front and rear positions of the queue, respectively.
+    arr[]: It's an array used to store the elements of the queue.
+
+Constructor:
+    MyQueue(): Initializes the queue by setting both front and rear to 0.
+
+push(int x):
+    Adds an element x to the queue by assigning it to the position indicated by rear and then incrementing rear. This operation effectively adds the element to the end of the queue.
+
+pop():
+    Checks if the queue is empty (front == rear). If it is, it returns -1 to indicate that the queue is empty.
+    If the queue is not empty, it retrieves the element at the front (arr[front]), increments front, and returns the retrieved element.
+
+Time Complexity:
+    Push Operation:
+      The time complexity of push operation is O(1) on average.
+    Pop Operation:
+      The time complexity of the pop operation is also O(1) on average
