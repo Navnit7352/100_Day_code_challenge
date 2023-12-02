@@ -1,0 +1,15 @@
+Frequency Counting:
+    It creates a HashMap (map) to store the frequency of elements in the first array a1.
+    It counts how many times each element appears in a1 and stores this count in the map.
+
+Subset Checking:
+    It then goes through the elements of the second array a2.
+    For each element in a2, it checks if that element exists in a1 and if its count in a1 is greater than 0.
+    If any element in a2 isn't found in a1 or its count is already 0 (meaning it's not available in enough quantity in a1), it concludes that a2 is not a subset of a1 and returns "No".
+    If all elements in a2 are found in a1 with sufficient counts, it confirms that a2 is a subset of a1 and returns "Yes".
+
+Time Complexity:
+    the overall time complexity of the code is O(n + m), where
+    n is the size of the first array a1.
+    m is the size of the second array a2.
+  
