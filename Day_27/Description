@@ -1,0 +1,14 @@
+threeWayPartition function takes in an array, 'array', and two integers 'a' and 'b', representing the lower and upper bounds of the range.
+Three pointers are used: 'smaller', 'between', and 'larger'.
+The 'smaller' pointer marks the boundary for elements less than 'a'.
+The 'between' pointer marks the boundary for elements between 'a' and 'b'.
+The 'larger' pointer marks the boundary for elements greater than 'b'.
+
+The algorithm proceeds as follows:
+    The 'between' pointer moves through the array.
+    If the element at 'between' is less than 'a', it swaps it with the element at the 'smaller' pointer, increments 'smaller' and 'between'.
+    If the element at 'between' is between 'a' and 'b', it just increments 'between'.
+    If the element at 'between' is greater than 'b', it swaps it with the element at the 'larger' pointer and decrements 'larger'.
+    This process continues until 'between' surpasses 'larger', indicating the partitioning is complete.
+Time complexity:
+    The time complexity of this algorithm is O(n)
