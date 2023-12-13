@@ -1,0 +1,26 @@
+The maxSumPairWithDifferenceLessThanK method takes in the array arr[], its size N, and the value K as inputs.
+It starts by sorting the array arr[] in ascending order using Arrays.sort(arr).
+
+It initializes an array dp[] of size N and fills it with -1 using Arrays.fill(dp, -1). 
+This array dp[] is used to store the sum of elements forming pairs.
+
+It initializes the variable ans to 0, which will eventually hold the maximum sum of disjoint pairs.
+The code then iterates backward through the sorted array (for(int i=N-1; i>=0; i--)), 
+ensuring that it starts from the largest elements.
+
+For each element at index i, it checks if the corresponding dp[] value is -1, indicating that it has not been paired yet.
+If dp[i] is -1, it enters a nested loop that iterates through elements from index i-1 towards 0 (i.e., elements smaller than the current one).
+
+Within this loop, it checks if the difference between arr[i] and arr[j] (where j is the smaller index) is less than K.
+If the difference condition (arr[i] - arr[j] < K) is satisfied and the dp[j] value is still -1 (indicating it's not paired yet) 
+it adds arr[i] and arr[j] to the ans, assigns the sum to dp[j], and breaks out of the inner loop (as pairs must be disjoint).
+
+Finally,
+the method returns the accumulated ans, which represents the maximum sum of disjoint pairs where the difference between the elements in 
+each pair is less than K.
+
+Time Complexity:
+    Sorting the array takes O(N log N) time.
+    The nested loop runs in O(N^2) time in the worst case since for each element i, it checks against elements from j=i-1 to 0. 
+    Therefore, the dominant time complexity in this algorithm is the nested loop, resulting in an overall time complexity of O(N^2) 
+    due to the nested iteration.
