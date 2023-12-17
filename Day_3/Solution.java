@@ -1,35 +1,59 @@
-class Solution{
-    public static String printMinNumberForPattern(String pattern){
-        int n=pattern.length();
-        int[] result=new int[n];
+/*
+Write a program to implement a Stack using Array. Your task is to use the class as shown in the comments in the code editor and complete the
+functions push() and pop() to implement a stack. 
 
-        for(int i=0; i<n; i++){
-            result[i]=i+1;
-        }
+Example 1:
+        Input: 
+        push(2)
+        push(3)
+        pop()
+        push(4) 
+        pop()
+        Output: 3, 4
+        Explanation: 
+        push(2)    the stack will be {2}
+        push(3)    the stack will be {2 3}
+        pop()      poped element will be 3,
+                   the stack will be {2}
+        push(4)    the stack will be {2 4}
+        pop()      poped element will be 4
+        
+Example 2:
+        Input: 
+        pop()
+        push(4)
+        push(5)
+        pop()
+        Output: -1, 5
+*/
 
-        for(int i=0; i<n-1; i++){
-            if(pattern.charAt(i)=='D'){
-                int start=i;
-                while (i<n-1 && pattern.charAt(i)=='D') {
-                    i++;
-                }
-                reverse(result,start,i);
-            }
-        }
+//Code
+class MyStack
+{
+    int top;
+    //size of stack is 1000
+	int arr[] = new int[1000];
 
-        StringBuilder sb=new StringBuilder();
-        for(int num:result){
-            sb.append(num);
+    MyStack()
+	{
+		top = -1;
+	}
+	
+	//Function to push data into stack
+    void push(int a)
+	{
+	    top++;
+	    arr[top]=a;
+	} 
+	
+    //Function to pop data from stack
+	int pop()
+	{
+        if(top==-1){
+            return -1;
         }
-        return sb.toString();
-    }
-    private static void reverse(int[] arr,int start,int end){
-        while (start<end) {
-            int temp=arr[start];
-            arr[start]=arr[start];
-            arr[end]=temp;
-            start++;
-            end--;
-        }
-    }
+        return arr[top--];
+	}
 }
+
+//Time complexity = O(1).
