@@ -1,6 +1,0 @@
-This code attempts to find the column in a square matrix (arr) of size N x N that contains the maximum number of zeros.
-However, there's a flaw in the logic as it doesn't correctly count zeros in the matrix but instead counts the number of rows in each column.
-The code then tries to compare these counts to find the column with the most rows, assuming it contains the most zeros, but it doesn't actually check the matrix elements for zeros.
-
-Time Complexity:
-    The time complexity of this code is O(N^2)
