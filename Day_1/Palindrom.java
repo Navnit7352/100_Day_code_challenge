@@ -4,6 +4,7 @@ Which will return 1 if all the elements of the Array are palindrome otherwise it
 
 Example 1:
 
+
         Input:
         5
         111 222 333 444 555
