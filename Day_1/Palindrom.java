@@ -10,7 +10,7 @@ Example 1:
         111 222 333 444 555
         
         Output:
-      
+        1
         
         Explanation:
         A[0] = 111 //which is a palindrome number.
